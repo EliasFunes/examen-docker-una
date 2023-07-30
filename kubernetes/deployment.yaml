@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hola-desde-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hola-desde-pod
+  template:
+    metadata:
+      labels:
+        app: hola-desde-pod
+    spec:
+      containers:
+        - name: examen-una-container
+          image: eliasfunes/examen-una:latest
+          ports:
+            - containerPort: 3000

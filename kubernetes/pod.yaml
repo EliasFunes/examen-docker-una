@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hola-desde-pod
+spec:
+  containers:
+    - name: examen-una-container
+      image: eliasfunes/examen-una:latest
+      ports:
+        - containerPort: 3000
